@@ -1,68 +1,166 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --background-color: #222;
+  --background-color-negative: #ddd;
+  --alternative-background-color: #111;
+  --alternative-background-color-negative: #eee;
+  --foreground-color: #ccc;
+  --foreground-color-negative: #333;
+  --accent: #c0c0c0;
+  --accent-negative: #3f3f3f;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main {
+  margin-top: 100px;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: xx-large;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.heading-font {
+  color: inherit;
+  font-size: large;
 }
+
+
+
+.nav-link,
+.external {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 6px;
+  color: inherit;
+  font-size: inherit;
+  border: none;
+  background-color: inherit !important;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.external {
+  border-radius: 15px;
+  text-decoration: underline !important;
+}
+
+.external:hover {
+  background-color: var(--background-color-negative) !important;
+  color: var(--foreground-color-negative);
+}
+
+.nav-link:hover {
+  color: inherit;
+  /* text-shadow: 1px 1px 2px var(--accent), 0 0 1em darkslategray, 0 0 0.2em darkslategray !important; */
+  transition: all 0.5s;
+  border: 1px solid;
+  border-radius: 15px;
+}
+
+article {
+  padding: 10px 20px;
+  text-align: start;
+  margin: auto;
+}
+
+article,
+.inner-frame {
+  border: 4px inset var(--alternative-background-color);
+}
+
+.outer-frame {
+  border: 4px outset var(--alternative-background-color);
+}
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: gray;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  body {
+    --background-color: #ddd;
+    --background-color-negative: #222;
+    --alternative-background-color: #eee;
+    --alternative-background-color-negative: #111;
+    --foreground-color: #333;
+    --foreground-color-negative: #ccc;
+    --accent: #3f3f3f;
+    --accent-negative: #c0c0c0;
   }
-  a:hover {
-    color: #747bff;
-  }
+
   button {
-    background-color: #f9f9f9;
+    background-color: black;
+    color: white;
+  }
+
+  .outer-frame {
+    border: 4px outset var(--alternative-background-color-negative);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  :target {
+    scroll-margin-top: 122px;
+  }
+
+  article {
+    width: calc(70%);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-link {
+    font-size: 20px;
+  }
+
+  :target {
+    scroll-margin-top: 101px;
+  }
+
+  article {
+    width: calc(70%);
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-link {
+    font-size: 30px;
+  }
+
+  :target {
+    scroll-margin-top: 86px;
+  }
+
+  article {
+    border-width: 6px;
+
+  }
+
+  .inner-frame {
+    border-width: 7px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-height: 499px) {
+  .nav-link {
+    font-size: 20px;
   }
 }

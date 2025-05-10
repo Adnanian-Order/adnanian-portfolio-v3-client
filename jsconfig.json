@@ -1,0 +1,14 @@
+// jsconfig.json (put in your project root)
+{
+    "compilerOptions": {
+        "baseUrl": ".", // Root of your project
+        "paths": {
+            "@/*": [
+                "src/*"
+            ] // Optional alias for imports like '@/components/Btn'
+        }
+    },
+    "include": [
+        "src"
+    ]
+}
