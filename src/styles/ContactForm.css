@@ -1,0 +1,83 @@
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    border: 4px outset var(--alternative-background-color);
+    padding: 2px 6px;
+    margin-bottom: 50px;
+}
+
+#contact form * {
+    margin: 5px;
+}
+
+#contact form :not(label, input[type="submit"]) {
+    border: 4px inset var(--accent-negative);
+}
+
+#contact form input[type="submit"] {
+    border: inherit;
+}
+
+#contact h1 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+#contact form :is(input, textarea) {
+    font-size: 12px;
+    background-color: silver;
+    padding: 8px 16px;
+}
+
+#contact form textarea {
+    resize: none;
+}
+
+#contact form input[type="submit"] {
+    color: navy;
+    font-weight: bold;
+    margin-top: 32px;
+    margin-bottom: 3px;
+}
+
+#contact form input[type="submit"]:hover {
+    background: linear-gradient(to right, darkslategray, white, darkslategray);
+    font-size: 25px;
+}
+
+@media (prefers-color-scheme: light) {
+    #contact form {
+        border-color: var(--alternative-background-color-negative);
+    }
+
+    #contact form :not(label, input[type="submit"]) {
+        border: 4px inset var(--accent);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #contact form label {
+        font-size: 22px;
+    }
+
+    #contact form {
+        padding: 10px 30px;
+    }
+
+    #contact form :is(input, textarea) {
+        font-size: 18px;
+    }
+
+    /*Reference: https://stackoverflow.com/questions/2034544/textareas-rows-and-cols-attribute-in-css */
+    #contact form textarea {
+        width: 25em;
+    }
+}

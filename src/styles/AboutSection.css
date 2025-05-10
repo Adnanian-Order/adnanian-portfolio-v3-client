@@ -39,7 +39,7 @@
 
 @media only screen and (max-width: 400px) {
     #about iframe {
-        width: 300px;
+        width: 90%;
     }
 }
 
