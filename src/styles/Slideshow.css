@@ -1,0 +1,46 @@
+.slideshow {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.slide-heading {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.slide-navigation {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10px 0;
+}
+
+.slide-button {
+    width: 137.5px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1357px) {
+    .slideshow {
+        width: 900px;
+    }
+
+    .slide-button {
+        width: 442px;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 1358px) {
+    .slideshow {
+        width: 1200px;
+    }
+
+    .slide-button {
+        width: 592px;
+        font-size: 36px;
+    }
+}

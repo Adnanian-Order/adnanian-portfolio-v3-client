@@ -1,4 +1,5 @@
 # Adnanian Order - The Portfolio of Adnan Wazwaz
+
 Author: Adnan Wazwaz
 
 Version: 2.1.2
@@ -24,7 +25,6 @@ Adnanian Application # 4
 3. [Future Plans](#future-plans)
 4. [Credits](#credits)
 
-
 ## Overview
 
 ### What This Application Does
@@ -42,7 +42,7 @@ on a simple level, they can find this website here.
 
 As of 1.1, Adnanian Order is a frontend web application. This website was built
 using HTML, CSS, and Javascript with the React library. The application is
-deployed using Netlify. You can find the live site here at 
+deployed using Netlify. You can find the live site here at
 [https://adnan-wazwaz.netlify.app/](https://adnan-wazwaz.netlify.app/). Netlify was used to allow form submissions
 to send directly to my email address.
 
@@ -80,34 +80,36 @@ doing them for desktop.
 
 With those significant improvements in the styling, my website looks much cleaner.
 
+### Details from Previous Versions
+
 #### Version 2.1.1
 
 - Included more skills in the skills section:
-    - Ubuntu
-    - Bash
-    - Vite.js
-    - Visual Studio Code
-    - Android
-    - Windows 11
-    - GitHub
-    - Markdown
+  - Ubuntu
+  - Bash
+  - Vite.js
+  - Visual Studio Code
+  - Android
+  - Windows 11
+  - GitHub
+  - Markdown
 
 - Corrected typos and grammatical mistakes.
 
 #### Version 2.1.2
 
 - Included more skills in the skills section:
-    - TypeScript (after completing two TypeScript LinkedIn courses, and I plan to complete more).
-    - Microsoft SQL Server
-    - Oracle
-    - Apple
-    - Linux
-    - Raspberry Pi
-    - Apple Safari
-    - Chrome
-    - Google
-    - Internet Explorer 10 (although nobody uses it anymore).
-    - LinkedIn
+  - TypeScript (after completing two TypeScript LinkedIn courses, and I plan to complete more).
+  - Microsoft SQL Server
+  - Oracle
+  - Apple
+  - Linux
+  - Raspberry Pi
+  - Apple Safari
+  - Chrome
+  - Google
+  - Internet Explorer 10 (although nobody uses it anymore).
+  - LinkedIn
 
 - Moved the most releveant skills of the tech stack to the top of the skills
 section.
@@ -125,6 +127,7 @@ section.
 ![After Proper Styling](/README_images/better-styling.jpg)
 
 ### Other Changes
+
 In terms of JSX content, I combined the technical projects and side projects
 section into one section. In this version, the user can toggle between radio
 buttons to view project types. Less scrolling makes it easier.
@@ -150,6 +153,7 @@ and not just for Mada.
 - Translate this website into Arabic.
 
 ## Credits
+
 MIT License
 
 Copyright (c) 2024 Adnan Wazwaz

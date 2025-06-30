@@ -1,0 +1,125 @@
+#projects {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects>p {
+    padding: 6px 30px;
+    width: 62.5%;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+#projects .radio-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.project-slide,
+#mada-slides {
+    width: 275px;
+    margin: auto;
+}
+
+.project-slide img,
+#mada-slides .slide-container {
+    width: 267px;
+    height: 200px;
+}
+
+.project-info {
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.project-info :not(h3, span) {
+    text-align: start;
+    margin: 20px 10px;
+}
+
+.project-info .pinfo-table {
+    margin: 15px auto;
+    border: 1px solid var(--accent);
+}
+
+.project-info .pinfo-table * {
+    padding: 5px 12px;
+    text-align: center;
+    border: 1px inset var(--accent);
+}
+
+.slide-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 18px;
+}
+
+#projects article {
+    width: 70%;
+}
+
+#mada-slides .slide-container img {
+    width: inherit;
+    height: inherit;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1357px) {
+
+    .project-slide,
+    #mada-slides {
+        width: 875px;
+    }
+
+    .project-slide img,
+    #mada-slides .slide-container {
+        width: 867px;
+        height: 300px;
+    }
+
+    .project-info {
+        width: 867px;
+        height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .slide-nav {
+        font-size: 29px;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 1358px) {
+
+    .project-slide {
+        width: 1175px;
+    }
+
+    .project-slide .slide-core {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .project-slide .slide-core>* {
+        width: 579.5px;
+        height: 450px;
+    }
+
+    .slide-nav {
+        justify-content: space-evenly;
+        font-size: 36px;
+    }
+
+    #mada-slides .slide-container {
+        width: 1167px;
+        height: 400px;
+    }
+}
