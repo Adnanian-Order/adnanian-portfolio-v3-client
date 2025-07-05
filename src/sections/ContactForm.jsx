@@ -1,45 +1,41 @@
-import { useState } from "react";
 import "../styles/ContactForm.css";
+import { useForm, ValidationError } from "@formspree/react";
 
 /**
  * Creates a Netlify compatible form to contact Adnan for any inquires.
  * All submissions will be sent to Adnan's email.
  * 
+ * References:
+ * https://help.formspree.io/hc/en-us/articles/360055613373-The-Formspree-React-library
+ * https://help.formspree.io/hc/en-us/articles/360053819114-The-Formspree-CLI
+ * 
  * @returns a contact form.
  */
 export default function ContactForm() {
-    const [formData, setFormData] = useState({
-        'name': "",
-        'email': "",
-        'message': ""
-    });
+    const [state, handleSubmit, reset] = useForm('contactForm');
 
-    /**
-     * Updates the formData state value based
-     * on the change of input.
-     * 
-     * @param {Event} e the event. 
-     */
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
+    if (state.submitting) {
+        return <p>Submitting...</p>
+    }
+
+    if (state.succeeded) {
+        return (
+            <div>
+                <p>Thanks!</p>;<button onClick={reset}>Reset</button>
+            </div>
+        );
+    }
 
     return (
         <section id="contact">
             <h1>Get in Touch with Me</h1>
-            <form name="contact" method="post">
-                <input type="hidden" name="form-name" value="contact" />
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input
                     id="name"
                     name="name"
                     type="text"
-                    value={formData.name}
                     placeholder="Enter your name..."
-                    onChange={handleChange}
                     autoComplete="off"
                 />
                 <br />
@@ -48,9 +44,7 @@ export default function ContactForm() {
                     id="email"
                     name="email"
                     type="email"
-                    value={formData.email}
                     placeholder="Enter your email..."
-                    onChange={handleChange}
                     autoComplete="off"
                 />
                 <br />
@@ -58,12 +52,10 @@ export default function ContactForm() {
                 <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
                     placeholder="Enter your message..."
-                    onChange={handleChange}
                     rows="10"
                 ></textarea>
-                <input type="submit" />
+                <input type="submit" disabled={state.submitting} />
             </form>
         </section>
     );

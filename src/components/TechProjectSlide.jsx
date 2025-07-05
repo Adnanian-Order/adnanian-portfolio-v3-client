@@ -18,8 +18,25 @@ export default function TechProjectSlide({ techProject }) {
         return <p key={index} className="text-box">{p}</p>
     });
 
+    // console.log(techProject.project_skills);
+
+    // const projectSkillCards = techProject.project_skills.map((psMapping) => {
+    //     return (
+    //         <div key={psMapping.id} className="project-skill-card">
+    //             <img
+    //                 src={`${import.meta.env.VITE_API_BASE_URL}/image/${psMapping.skill.icon_filepath}`}
+    //                 alt={`Adnan used '${psMapping.skill.name}' to complete '${techProject.title}'.`}
+    //             />
+    //             <span>{psMapping.skill.name}</span>
+    //         </div>
+    //     );
+    // });
+
     return (
         <div className="project-slide">
+            {/* <div className="project-skill-grid inner-frame">
+                {projectSkillCards}
+            </div> */}
             <div className="slide-core">
                 <img
                     src={`${import.meta.env.VITE_API_BASE_URL}/image/${techProject.screenshot_filepath}`}

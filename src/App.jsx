@@ -5,11 +5,12 @@ import Header from './navigation/Header'
 import ProjectsSection from './sections/ProjectsSection'
 import SkillsSection from './sections/SkillsSection'
 import TopSection from './sections/TopSection'
+import { FormspreeProvider } from '@formspree/react'
 
 function App() {
 
   return (
-    <>
+    <FormspreeProvider project={import.meta.env.FORMSPREE_PROJECT_ID}>
       <Header />
       <main>
         <TopSection />
@@ -19,7 +20,7 @@ function App() {
         <ContactForm />
       </main>
       <Footer />
-    </>
+    </FormspreeProvider>
   )
 }
 
