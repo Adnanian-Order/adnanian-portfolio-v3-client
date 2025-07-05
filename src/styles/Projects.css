@@ -53,6 +53,11 @@
     border: 1px inset var(--accent);
 }
 
+.project-info h5 {
+    font-size: larger;
+    text-align: center;
+}
+
 .slide-nav {
     display: flex;
     flex-direction: row;

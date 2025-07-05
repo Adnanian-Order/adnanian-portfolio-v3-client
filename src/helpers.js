@@ -37,22 +37,12 @@ export const ProjectType = Object.freeze({
     SIDE: "side"
 });
 
-// const API_URL = process.env.NODE_ENV === "development" ? "http://127.0.0.1:5000" : process.env.REACT_APP_DEPLOYED_SERVER_URL;
-
 /**
- * TODO
+ * Checks if a given character is an English letter.
  * 
- * @param {*} route 
- * @returns 
+ * @param {String} char the character to evaluate.
+ * @returns true if the character is an English letter, false otherwise.
  */
-export function correctRoute(route) {
-    return null;
-}
-
-export function getImage(imageURL, category) {
-    return correctRoute(`get-image/${imageURL}/${category}`);
-}
-
 export function isEnglishLetter(char) {
     if (char.length !== 1) {
         throw new Error("Char argument must be a single character.");
@@ -62,12 +52,13 @@ export function isEnglishLetter(char) {
 }
 
 /**
- * TODO
+ * Formats a date string so that it displays the name of the month,
+ * followed by the day and year.
  * 
  * FROM CHATGPT XD
  * 
  * @param {*} dateString 
- * @returns 
+ * @returns MONTH_NAME DAY, YEAR
  */
 export function formatDate(dateString) {
     const dateArgs = dateString.split("-");

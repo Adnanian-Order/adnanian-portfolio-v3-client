@@ -1,4 +1,4 @@
-import { formatDate, getImage } from "../helpers";
+import { formatDate } from "../helpers";
 
 /**
  * Creates a slide for the slideshow based on the information
@@ -18,14 +18,11 @@ export default function TechProjectSlide({ techProject }) {
         return <p key={index} className="text-box">{p}</p>
     });
 
-    console.log("Demo Link", !techProject.demo_link);
-    console.log("Type of DEMO Link!", typeof techProject.demo_link);
-
     return (
         <div className="project-slide">
             <div className="slide-core">
                 <img
-                    src={getImage(techProject.screenshot_url, "project")}
+                    src={`${import.meta.env.VITE_API_BASE_URL}/image/${techProject.screenshot_filepath}`}
                     alt="The technical project on the computer."
                     className="inner-frame"
                 />
@@ -48,7 +45,9 @@ export default function TechProjectSlide({ techProject }) {
                             </tr>
                         </tbody>
                     </table>
+                    <h5>Description:</h5>
                     {descriptionParagraphs}
+                    <h5>Key Points:</h5>
                     <ul>
                         {details}
                     </ul>

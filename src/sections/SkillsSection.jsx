@@ -27,18 +27,6 @@ export default function SkillsSection() {
             });
     }, []);
 
-    // const skillCards = skillSet.map((skill) => {
-    //     return (
-    //         <TechSkillCard key={`t-${skill.name}`} skill={skill} />
-    //     )
-    // });
-
-    // const skillCards = skills.map((skill) => {
-    //     return (
-    //         <TechSkillCard key={skill.id} skill={skill}/>
-    //     );
-    // });
-
     function orderSkillTypesById(a, b) {
         if (a.id < b.id) return -1;
         else if (a.id > b.id) return 1;
@@ -46,7 +34,6 @@ export default function SkillsSection() {
     }
 
     const skillCardGroupings = skillTypes.sort(orderSkillTypesById).map((skillType) => {
-        // return skills.filter((skill) => skillType.id === skill.skill_type_id);
         const category = <h2>{skillType.name}</h2>;
         const skillGroup = skills.filter((skill) => skillType.id === skill.skill_type_id);
         const skillCards = skillGroup.map((skill) => {
@@ -55,15 +42,14 @@ export default function SkillsSection() {
             );
         });
         return (
-            <>
+            <div key={skillType.id}>
                 {category}
                 <div className="skill-grid">
-
-                    {skillType.name === "Fields" ? "To Be Added..." : skillCards}
+                    {skillCards}
                 </div>
-            </>
+            </div>
         );
-    })
+    });
 
     return (
         <section id="skills">
