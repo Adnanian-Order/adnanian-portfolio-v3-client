@@ -10,7 +10,7 @@ import { FormspreeProvider } from '@formspree/react'
 function App() {
 
   return (
-    <FormspreeProvider project={import.meta.env.FORMSPREE_PROJECT_ID}>
+    <FormspreeProvider project={import.meta.env.VITE_FORMSPREE_PROJECT_ID}>
       <Header />
       <main>
         <TopSection />
