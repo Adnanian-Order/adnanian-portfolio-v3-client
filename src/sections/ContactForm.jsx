@@ -1,5 +1,5 @@
 import "../styles/ContactForm.css";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 
 /**
  * Creates a Netlify compatible form to contact Adnan for any inquires.
@@ -15,14 +15,25 @@ export default function ContactForm() {
     const [state, handleSubmit, reset] = useForm('contactForm');
 
     if (state.submitting) {
-        return <p>Submitting...</p>
+        return (
+            <h1 className="form-submitting inner-frame">Submitting...</h1>
+        );
     }
 
     if (state.succeeded) {
         return (
-            <div>
-                <p>Thanks!</p>;<button onClick={reset}>Reset</button>
-            </div>
+            <section id='contact'>
+                <div className="form-submitting inner-frame">
+                    {/* <p>Thanks!</p>;<button onClick={reset}>Reset</button> */}
+                    <h2>Thank you for your submission!</h2>
+                    <p> Thank you for contacting me. I will be in touch with you
+                        very soon.
+                    </p>
+                    <button className="outer-frame" onClick={reset}>
+                        Reset Form
+                    </button>
+                </div>
+            </section>
         );
     }
 

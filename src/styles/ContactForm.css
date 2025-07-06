@@ -53,6 +53,17 @@
     font-size: 25px;
 }
 
+.form-submitting {
+    width: fit-content;
+    margin: 50px auto 20px;
+    text-align: center;
+    padding: 16px;
+}
+
+.form-submitting button {
+    font-size: larger;
+}
+
 @media (prefers-color-scheme: light) {
     #contact form {
         border-color: var(--alternative-background-color-negative);
@@ -60,6 +71,13 @@
 
     #contact form :not(label, input[type="submit"]) {
         border: 4px inset var(--accent);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form-submitting {
+        width: 80%;
+        padding: 8px;
     }
 }
 
