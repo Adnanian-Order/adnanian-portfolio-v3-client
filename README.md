@@ -127,7 +127,7 @@ to the previous ones having security issues. The new repository was created with
 Vite.js. The older repositories were created with CreateReactApp, which is now
 deprecated.
 
-  - If you would like to view the old repository, you can do so [here](https://github.com/adnanian/adnanian-portfolio/settings).
+  - [Click here to view the old repo.](https://github.com/adnanian/adnanian-portfolio)
 
 - Previously, I deployed the client on Netlify and the server on Vercel. Now
 all repositories for this project are deployed on Render, including the database.
