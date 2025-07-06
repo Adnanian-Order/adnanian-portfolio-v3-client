@@ -1,14 +1,13 @@
 # Adnanian Order - The Portfolio of Adnan Wazwaz
 
-Author: Adnan Wazwaz
-
-Version: 2.1.2
-
-Original Date: 2024 July 31
-
-Current Version Date: 2024 September 5
-
-Adnanian Application # 4
+|                                          |                                        |
+|------------------------------------------|----------------------------------------|
+|                  Author                  |              Adnan Wazwaz              |
+|                  Version                 |                  2.2.0                 |
+|               Original Date              |              2024 July 31              |
+|           Current Version Date           |               2025 July 6              |
+|             Adnanian App No.             |                   18A                  |
+| [**Demo**](https://youtu.be/bcAnHT04wJM) | [**Live**](https://adnanianorder.com/) |
 
 ## Table of Contents
 
@@ -38,21 +37,28 @@ This website also serves as my portfolio. I showcase my works and link my other
 social media, such as LinkedIn and YouTube. If somebody wants to get to know me
 on a simple level, they can find this website here.
 
+Not everyone uses LinkedIn, and I can't put everything on my resumé. So it's
+always nice to have everything on a portfolio.
+
 ### Technologies
 
-As of 1.1, Adnanian Order is a frontend web application. This website was built
-using HTML, CSS, and Javascript with the React library. The application is
-deployed using Netlify. You can find the live site here at
-[https://adnan-wazwaz.netlify.app/](https://adnan-wazwaz.netlify.app/). Netlify was used to allow form submissions
-to send directly to my email address.
+This application consists of three repositories on GitHub: the client (this repo),
+the server, and the admin. The client is the only repo that I have made public.
+
+The client is a frontend web application built using HTML, CSS, and JavaScript
+with the React library, and deployed on Render. The contact form is powered by
+Formspree CLI, which allows users to send messages to my email without needing
+a backend.
+
+The client retrieves the project and skill data from the server to have them
+rendered on the components.
 
 ### Limitations
 
-Because this is a frontend-only application, I had to hard code collections of
-my techstack and projects. Another limitation is the difficulty of managing
-appropriate styling for both desktop and mobile. As of 2.0, Adnanian Order is
-successfully styled for desktop computers and mobile devices. However, there is
-a lingering issue for the footer width for horizontal, mobile phones.
+There is a lingering issue with iframe element of the video. On mobile phones,
+the video takes up too much width. Even if I set the width to a percentage, it
+doesn't have any effect. The weird thing is that on DevTools, the iframe is
+resized the way I want to, even when I'm viewing it as a mobile phone.
 
 ## Changes
 
@@ -114,17 +120,43 @@ With those significant improvements in the styling, my website looks much cleane
 - Moved the most releveant skills of the tech stack to the top of the skills
 section.
 
+#### Version 2.2.0
+
+- Created a whole new repository and am retiring the previous ones. This is due
+to the previous ones having security issues. The new repository was created with
+Vite.js. The older repositories were created with CreateReactApp, which is now
+deprecated.
+
+- Previously, I deployed the client on Netlify and the server on Vercel. Now
+all repositories for this project are deployed on Render, including the database.
+Render makes it easy to organize related repositories into a single project.
+
+- Moved all code pertaining to management of skill and project data from the
+client repository to the new admin repository, so that the client repo is focused
+solely on data retrieval and display. Now I don't have to hardcode my
+projects anymore.
+
+  - The backend repo was created with Python, Flask, and PostgreSQL.
+
+  - The admin repo is another React/Vite.js frontend web app that requires
+  authorization to use.
+
+- Ensured that the only skills in the skill sections are those that I'm either
+a master of, or have a solid foundation. I no longer add skills of tools, languages,
+or other things that I simply dabbled in at one point, as those don't really
+count.
+
 ### Original Wireframe
 
-![Original Wireframe](/README_images/Portfolio%20Website%20Wireframe%20-20240725.png)
+![Original Wireframe](./readme-files/Portfolio%20Website%20Wireframe%20-20240725.png)
 
 ### Before Proper Styling
 
-![Before Proper Styling](/README_images/bad-styling.jpg)
+![Before Proper Styling](./readme-files/bad-styling.jpg)
 
 ### After Proper Styling
 
-![After Proper Styling](/README_images/better-styling.jpg)
+![After Proper Styling](./readme-files/better-styling.jpg)
 
 ### Other Changes
 
@@ -136,12 +168,8 @@ buttons to view project types. Less scrolling makes it easier.
 
 I plan to improve the application by doing the following:
 
-- Add a backend so that I can simplify the addition of new projects and skills,
-without having to do so through code. This will be done with either Node.js or
-a combination of Python, Flask, and SQL.
-
-- Use a CSS framework like React Bootstrap to make styling easier, and compatible
-for all platforms and screen sizes.
+- Use a CSS framework like React Bootstrap or Material UI to make styling
+easier, and compatible for all platforms and screen sizes.
 
 - Add animations for whenever I hover to or click on a component.
 
@@ -150,13 +178,15 @@ and not just for Mada.
 
 - Add more technical projects.
 
+- Maybe sort each group of skills in alphabetical order.
+
 - Translate this website into Arabic.
 
 ## Credits
 
 MIT License
 
-Copyright (c) 2024 Adnan Wazwaz
+Copyright (c) 2025 Adnan Wazwaz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -183,3 +213,11 @@ Special shoutout to [Danesh Madarbakus](https://www.linkedin.com/in/daneshmadarb
 his honest feedback and his knowledge on portfolios. He has shown me examples of how
 most modern websites are styled now adays. I took his feedback to heart and applied all these
 styling changes that you see in version 2.0 due to them. Thanks, bro.
+
+**2.2.0** - another special shoutout to [Saif Alkayali](https://www.linkedin.com/in/saif-alkayali/)
+for introducing me to GitHub Copilot and spending time showing me how to use
+it. I found it very handy to be able to solve and debug my code without having
+to continuously copy and paste into ChatGPT and removing certain words to
+protect my privacy. This helped me alot. I especially loved the code completions
+and the comments that they help me generate and complete, as sometimes that
+could be difficult. Thanks, bro.

@@ -7,6 +7,11 @@ import SkillsSection from './sections/SkillsSection'
 import TopSection from './sections/TopSection'
 import { FormspreeProvider } from '@formspree/react'
 
+/**
+ * Renders the entry point of the website.
+ * 
+ * @returns the entry point.
+ */
 function App() {
 
   return (

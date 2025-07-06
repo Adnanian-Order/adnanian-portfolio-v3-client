@@ -2,8 +2,10 @@ import "../styles/ContactForm.css";
 import { useForm } from "@formspree/react";
 
 /**
- * Creates a Netlify compatible form to contact Adnan for any inquires.
+ * Creates a Render compatible form to contact Adnan for any inquires.
  * All submissions will be sent to Adnan's email.
+ * 
+ * The form is powered with Formspree CLI.
  * 
  * References:
  * https://help.formspree.io/hc/en-us/articles/360055613373-The-Formspree-React-library
