@@ -74,6 +74,16 @@ export default function SkillsSection() {
                     DevIcons
                 </a>.
             </p>
+            <br />
+            <p className="inner-frame">
+                <a
+                    target="_blank"
+                    href="https://icons8.com/icon/35989/react-native"
+                >
+                    React Native
+                </a> icon by
+                <a target="_blank" href="https://icons8.com">Icons8</a>
+            </p>
             {skillCardGroupings}
         </section>
     );
