@@ -3,9 +3,9 @@
 |                                          |                                        |
 |------------------------------------------|----------------------------------------|
 |                  Author                  |              Adnan Wazwaz              |
-|                  Version                 |                  2.2.0                 |
+|                  Version                 |                  2.2.1                 |
 |               Original Date              |              2024 July 31              |
-|           Current Version Date           |               2025 July 6              |
+|           Current Version Date           |             2026 January 30            |
 |             Adnanian App No.             |                   18A                  |
 | [**Demo**](https://youtu.be/bcAnHT04wJM) | [**Live**](https://adnanianorder.com/) |
 
@@ -147,6 +147,13 @@ projects anymore.
 a master of, or have a solid foundation. I no longer add skills of tools, languages,
 or other things that I simply dabbled in at one point, as those don't really
 count.
+
+#### Version 2.2.1
+
+- Separated the skill React / React Native into two different skills, as they
+are different frameworks. Added the React Native icon from Icons8.
+
+- Added React Native credits in the Skills sections.
 
 ### Original Wireframe
 
